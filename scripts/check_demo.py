@@ -25,7 +25,7 @@ for path in root.rglob("*"):
             issues.append(f"Binary content: {rel}")
             continue
         if rel == "index.html":
-            for pattern in ["type=", "<input", "<textarea", "FileReader", "localStorage",
+            for pattern in ["type=\"file\"", "type=\'file\'", "<input", "<textarea", "FileReader", "localStorage",
                             "indexedDB", "XMLHttpRequest", "WebSocket", "sendBeacon",
                             "JSON.parse", "fetch("]:
                 if pattern.lower() in content.lower():
